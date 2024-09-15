@@ -13,6 +13,7 @@ import {
  
 import { FloatingDock } from '@/components/ui/floating-dock';
 import { Button } from '@/components/ui/button';
+import { BentoGridThirdDemo } from '@/components/hero';
 export default function Home() {
   const [mounted, setMounted] = useState(false);
 
@@ -24,8 +25,8 @@ export default function Home() {
 
   return (
     <>
-    <div>
-      <h1>hellow how are you</h1>
+    <div className='mt-20'>
+      <BentoGridThirdDemo />
       {/* <BackgroundBeamsWithCollision>
           <h2 className="text-2xl relative z-20 md:text-4xl lg:text-7xl font-bold text-center text-black dark:text-white font-sans tracking-tight">
             What&apos;s cooler than Beams?{" "}
