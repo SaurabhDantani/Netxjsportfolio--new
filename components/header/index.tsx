@@ -3,7 +3,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import menuData from "./menuData";
-import { ModeToggle } from "../toggle";
+import { ModeToggle } from "../theme/toggle";
 import {
   NavigationMenu,
   NavigationMenuContent,
