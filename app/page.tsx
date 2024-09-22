@@ -35,9 +35,9 @@ export default function Home() {
     <>
     <div className='mt-20'>
       <BackgroundBeamsWithCollision>
-       {/* <BentoGridThirdDemo /> */}
-       <MarqueeDemo />
+        <BentoGridThirdDemo />
       </BackgroundBeamsWithCollision>
+       <MarqueeDemo />
     </div>
     </>
   );

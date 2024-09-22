@@ -9,6 +9,8 @@
 # testing
 /coverage
 
+.codesandbox
+.devcontainer
 # next.js
 /.next/
 /out/
