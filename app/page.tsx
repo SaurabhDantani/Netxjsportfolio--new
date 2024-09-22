@@ -21,6 +21,7 @@ import { motion } from "framer-motion";
 import { FloatingDock } from '@/components/ui/floating-dock';
 import { Button } from '@/components/ui/button';
 import { BentoGridThirdDemo } from '@/components/hero';
+import { MarqueeDemo } from '@/components/magicui/data';
 export default function Home() {
   const [mounted, setMounted] = useState(false);
 
@@ -34,7 +35,8 @@ export default function Home() {
     <>
     <div className='mt-20'>
       <BackgroundBeamsWithCollision>
-       <BentoGridThirdDemo />
+       {/* <BentoGridThirdDemo /> */}
+       <MarqueeDemo />
       </BackgroundBeamsWithCollision>
     </div>
     </>
