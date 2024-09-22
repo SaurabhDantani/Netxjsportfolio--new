@@ -150,7 +150,18 @@ const SkeletonThree = () => {
         backgroundSize: "400% 400%",
       }}
     >
-      <motion.div className="h-full w-full rounded-lg"></motion.div>
+      <motion.div className="h-full w-full rounded-lg">
+
+        <div className="bg-blue-200 h-32 w-32 mt-6 mx-auto flex justify-center items-center rounded-full border-10 border-yellow-500 ">
+          <Image
+            src="https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg"
+            alt="avatar"
+            height="100"
+            width="100"
+            className="rounded-full h-28 w-28"
+          />
+        </div>
+      </motion.div>
     </motion.div>
   );
 };
@@ -317,17 +328,7 @@ const items = [
 //     className: "md:col-span-1",
 //     icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
 //   },
-  {
-    title: "Contextual Suggestions",
-    description: (
-      <span className="text-sm">
-        Get AI-powered suggestions based on your writing context.
-      </span>
-    ),
-    header: <SkeletonThree />,
-    className: "md:col-span-1",
-    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
-  },
+
   {
     title: "Sentiment Analysis",
     description: (
@@ -340,6 +341,17 @@ const items = [
     icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
   },
 
+  {
+    title: "Contextual Suggestions",
+    description: (
+      <span className="text-sm">
+        Get AI-powered suggestions based on your writing context.
+      </span>
+    ),
+    header: <SkeletonThree />,
+    className: "md:col-span-1",
+    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+  },
 //   {
 //     title: "Text Summarization",
 //     description: (
