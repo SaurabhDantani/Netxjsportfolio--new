@@ -1,67 +1,63 @@
 import { cn } from "@/lib/utils";
 import Marquee from "@/components/magicui/marquee";
-import nodejs from "../public/icons/nodedotjs.svg";
+import javascript from "@/public/icons/javascript.svg";
+import angular from "../public/icons/angular.svg";
+import express from "@/public/icons/express.svg";
 import nextjs from "@/public/icons/nextdotjs.svg";
-import nextjs from "@/public/icons/nextdotjs.svg";
-import nextjs from "@/public/icons/nextdotjs.svg";
-import nextjs from "@/public/icons/nextdotjs.svg";
-import nextjs from "@/public/icons/nextdotjs.svg";
-
+import jsonwebtokens from "@/public/icons/jsonwebtokens.svg";
+import nodedotjs from "@/public/icons/nodedotjs.svg";
+import reactjs from "@/public/icons/react.svg";
+import typeorm from "@/public/icons/typeorm.svg";
+import typescript from "@/public/icons/typescript.svg";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-
 import Image from "next/image";
+import TypingAnimation from "./ui/typing-animation";
 
 // https://simpleicons.org/?q=angular
 const reviews = [
   {
-    name: "Jack",
-    img: nodejs,
+    name: "Javascript",
+    img: javascript,
     url: "",
   },
   {
-    name: "Jill",
-    img: nextjs,
+    name: "Typescript",
+    img: typescript,
   },
   {
-    name: "Jack",
-    img: nodejs,
+    name: "Node Js",
+    img: nodedotjs,
+  },
+  {
+    name: "Express",
+    img: express,
+  },
+  {
+    name: "Type ORM",
+    img: typeorm,
+  },
+  {
+    name: "Json Web Tokens",
+    img: jsonwebtokens,
+  },
+  {
+    name: "React JS",
+    img: reactjs,
     url: "",
   },
   {
-    name: "Jill",
+    name: "Next JS",
     img: nextjs,
-  },
-  {
-    name: "Jack",
-    img: nodejs,
     url: "",
   },
   {
-    name: "Jill",
-    img: nextjs,
-  },
-  {
-    name: "Jack",
-    img: nodejs,
-    url: "",
-  },
-  {
-    name: "Jill",
-    img: nextjs,
-  },
-  {
-    name: "Jack",
-    img: nodejs,
-    url: "",
-  },
-  {
-    name: "Jill",
-    img: nextjs,
+    name: "Angular",
+    img: angular,
   },
 ];
 
@@ -79,6 +75,7 @@ const ReviewCard = ({
   url?: string;
 }) => {
   return (
+    <>
     <figure
       className={cn(
         "relative w-48 cursor-pointer overflow-hidden rounded-xl border p-4",
@@ -111,12 +108,21 @@ const ReviewCard = ({
         </div>
       </div>
     </figure>
+    </>
   );
 };
 
 export function MarqueeDemo() {
   return (
     <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
+      
+      <div className="m-4">
+        <TypingAnimation
+        className="text-4xl font-bold text-black dark:text-white"
+        text="Skill Section"
+      />
+      </div>
+
       <Marquee pauseOnHover className="[--duration:20s]">
         {firstRow.map((review) => (
           <ReviewCard key={review.name} {...review} />
