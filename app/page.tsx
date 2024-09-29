@@ -22,6 +22,7 @@ import { FloatingDock } from '@/components/ui/floating-dock';
 import { Button } from '@/components/ui/button';
 import { BentoGridThirdDemo } from '@/components/hero';
 import { MarqueeDemo } from '@/components/skills';
+import { Experiance } from '@/components/experiance';
 export default function Home() {
   const [mounted, setMounted] = useState(false);
 
@@ -38,6 +39,7 @@ export default function Home() {
         <BentoGridThirdDemo />
       </BackgroundBeamsWithCollision>
        <MarqueeDemo />
+       <Experiance />
     </div>
     </>
   );
