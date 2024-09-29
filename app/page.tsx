@@ -21,7 +21,7 @@ import { motion } from "framer-motion";
 import { FloatingDock } from '@/components/ui/floating-dock';
 import { Button } from '@/components/ui/button';
 import { BentoGridThirdDemo } from '@/components/hero';
-import { MarqueeDemo } from '@/components/magicui/data';
+import { MarqueeDemo } from '@/components/skills';
 export default function Home() {
   const [mounted, setMounted] = useState(false);
 
