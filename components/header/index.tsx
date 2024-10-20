@@ -15,6 +15,7 @@ import {
   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 import { Link } from "@radix-ui/react-navigation-menu";
+import NewNavBar from "./newNavbar";
 
 const Header = () => {
   const [navigationOpen, setNavigationOpen] = useState(false);
@@ -61,32 +62,8 @@ const Header = () => {
               className="dark:hidden"
             />
           </a>
+          <NewNavBar />
 
-          {/* Hamburger Toggle BTN */}
-          <button
-            aria-label="Toggle Navigation"
-            className="block xl:hidden"
-            onClick={() => setNavigationOpen(!navigationOpen)}
-          >
-            <span className="relative block w-6 h-6">
-              <span
-                className={`block h-0.5 w-full bg-black dark:bg-white transition-all duration-300 ${
-                  navigationOpen ? "rotate-45 translate-y-2.5" : ""
-                }`}
-              ></span>
-              <span
-                className={`block h-0.5 w-full bg-black dark:bg-white mt-1 transition-all duration-300 ${
-                  navigationOpen ? "opacity-0" : ""
-                }`}
-              ></span>
-              <span
-                className={`block h-0.5 w-full bg-black dark:bg-white mt-1 transition-all duration-300 ${
-                  navigationOpen ? "-rotate-45 -translate-y-2.5" : ""
-                }`}
-              ></span>
-            </span>
-          </button>
-          {/* Hamburger Toggle BTN */}
         </div>
 
         {/* Nav Menu */}
@@ -97,7 +74,7 @@ const Header = () => {
               : "hidden xl:flex"
           }`}
         >
-          <NavigationMenu>
+          {/* <NavigationMenu>
             <NavigationMenuList className="flex flex-col xl:flex-row">
               {menuData.map((menuItem, key) => (
                 <NavigationMenuItem key={key}>
@@ -138,12 +115,13 @@ const Header = () => {
             </NavigationMenuList>
             <NavigationMenuIndicator />
             <NavigationMenuViewport />
-          </NavigationMenu>
+          </NavigationMenu> */}
 
           <div className="mt-5 flex items-center gap-6 xl:mt-0">
+            <NewNavBar />
             <ModeToggle />
           </div>
-        </div>
+        </div>``
         {/* Nav Menu End */}
       </div>
     </header>
